@@ -12,7 +12,6 @@ import com.squareup.picasso.Picasso;
 
 public class InfoActivity extends AppCompatActivity {
 
-    TextView textView = findViewById(R.id.text_view_address);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +23,6 @@ public class InfoActivity extends AppCompatActivity {
                 load(uri).
                 into(candyStoreImageView);
 
-        createMapIntent(textView);
 
     }
 
