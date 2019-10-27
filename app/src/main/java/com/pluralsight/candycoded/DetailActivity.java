@@ -16,6 +16,7 @@ import com.pluralsight.candycoded.DB.CandyContract.CandyEntry;
 import com.pluralsight.candycoded.DB.CandyDbHelper;
 import com.squareup.picasso.Picasso;
 
+
 public class DetailActivity extends AppCompatActivity {
 
     public static final String SHARE_DESCRIPTION = "Look at this delicious candy from Candy Coded - ";
@@ -81,7 +82,8 @@ public class DetailActivity extends AppCompatActivity {
     public void createShareIntent(){
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("text/plain");
-        shareIntent.putExtra("INTENT.EXTRA_TEXT", SHARE_DESCRIPTION + mCandyImageUrl + HASHTAG_CANDYCODED);
+        String concat = SHARE_DESCRIPTION + mCandyImageUrl + HASHTAG_CANDYCODED;
+        shareIntent.putExtra("INTENT.EXTRA_TEXT", concat);
         startActivity(shareIntent);
     }
 }
